@@ -24,6 +24,9 @@ jobs:
       - name: Validate OKF bundle
         run: python3 scripts/check_okf.py
 
+      - name: Validate published document
+        run: python3 scripts/validate_published_document.py
+
       - name: Build static site
         run: python3 scripts/build_site.py
 

@@ -15,10 +15,14 @@ PUBLIC_ROOT_FILES = [
     "log.md",
     "README.md",
     "PUBLICATION.md",
+    "LICENSE.md",
+    "LICENSE-CODE.md",
+    "CITATION.cff",
 ]
 PUBLIC_DIRS = ["document", "glossary", "organisations", "standards", "uk-government"]
 FORBIDDEN_SUFFIXES = {".docx"}
 FORBIDDEN_NAMES = {".DS_Store"}
+PUBLIC_DOCX_FILES = {"document/paper/from-get-to-agentic-government.docx"}
 
 
 def copy_file(source: Path, target: Path) -> None:
@@ -30,9 +34,10 @@ def copy_public_tree(source_dir: Path, target_dir: Path) -> None:
     for source in source_dir.rglob("*"):
         if source.is_dir():
             continue
+        source_rel = source.relative_to(ROOT).as_posix()
         if source.name in FORBIDDEN_NAMES or source.name.startswith("~$"):
             continue
-        if source.suffix.lower() in FORBIDDEN_SUFFIXES:
+        if source.suffix.lower() in FORBIDDEN_SUFFIXES and source_rel not in PUBLIC_DOCX_FILES:
             continue
         copy_file(source, target_dir / source.relative_to(source_dir))
 
@@ -42,10 +47,11 @@ def assert_no_forbidden_files() -> None:
     for path in OUT.rglob("*"):
         if not path.is_file():
             continue
+        rel = path.relative_to(OUT).as_posix()
         if path.name in FORBIDDEN_NAMES or path.name.startswith("~$"):
-            errors.append(path.relative_to(OUT).as_posix())
-        if path.suffix.lower() in FORBIDDEN_SUFFIXES:
-            errors.append(path.relative_to(OUT).as_posix())
+            errors.append(rel)
+        if path.suffix.lower() in FORBIDDEN_SUFFIXES and rel not in PUBLIC_DOCX_FILES:
+            errors.append(rel)
     if errors:
         joined = "\n".join(f"- {error}" for error in errors)
         raise RuntimeError(f"forbidden files in site build:\n{joined}")

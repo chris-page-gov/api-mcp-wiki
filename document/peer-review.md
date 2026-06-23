@@ -16,15 +16,15 @@ severity: "1 gap, 6 sourcing, 3 presentation"
 All 21 dated/version claim-groups checked against primary sources — **all correct** — including the hard recent ones: OpenAPI 3.2 (Sep 2025), AsyncAPI 3.1 (Jan 2026), OAuth BCP RFC 9700 (Jan 2025), A2A → Linux Foundation (Jun 2025), the Jan 2025 Blueprint, the Apr 2025 API discovery. Only Arazzo's exact month is unconfirmed (schema iteration dated 2026-04-15).
 
 # Issues
-- **S1 (now drafted):** a [legal and accountability layer](themes/legal-accountability-layer.md) has been added (tracked insertion in the .docx). Original gap: no legal/accountability layer (DUAA 2025 Arts 22A–D; ATRS; public-law duty to give reasons; Equality Act 2010 s.149 PSED; redress). For government the binding control is **law, not protocol**.
-- **Sourcing (C1–C6):** HTTP/0.9 mis-cited to RFC 2068; [SOAP](../standards/soap.md)/[WSDL](../standards/wsdl.md)/[gRPC](../standards/grpc.md)/[Arazzo](../standards/arazzo.md) uncited; [OpenAPI](../standards/openapi.md) link is the Style Guide; [JSON](../standards/json.md) cites RFC 4627 (now RFC 8259); many links carry `?utm_source=chatgpt.com`; no access dates.
-- **Presentation (P1–P3):** stray "/" in title; add a handling note; optional summary box.
+- **S1 resolved in the published paper:** a [legal and accountability layer](themes/legal-accountability-layer.md) was added. Original gap: no legal/accountability layer (DUAA 2025 Arts 22A-22D; ATRS; public-law duty to give reasons; Equality Act 2010 s.149 PSED; redress). For government the binding control is **law, not protocol**.
+- **Sourcing resolved for publication:** missing citations were added, the references section contains 34 entries, and published paper URLs are checked against the OKF corpus by `scripts/validate_published_document.py`.
+- **Presentation resolved for publication:** the public paper is available as [Markdown](paper/from-get-to-agentic-government.md), [PDF](paper/from-get-to-agentic-government.pdf), and [DOCX](paper/from-get-to-agentic-government.docx).
 
 # Strengths
 Accuracy; the semantics-vs-wire spine; "open = discoverable, not open data"; the cautious MCP/A2A treatment; honest maturity framing.
 
 # Deliverables
-Tracked .docx (`From GET to Agentic Government__PEER-REVIEW-tracked.docx`) with 4 tracked insertions, 8 comments, and a 34-entry References section; full review in `PEER-REVIEW_From-GET-to-Agentic-Government.md`.
+Published paper: [From GET to Agentic Government](paper/from-get-to-agentic-government.md), with [PDF](paper/from-get-to-agentic-government.pdf) and [DOCX](paper/from-get-to-agentic-government.docx) formats.
 
 # Terms
 Glossary terms used here: [Redress](../glossary/redress.md), [Schema](../glossary/schema.md), [Semantic interoperability](../glossary/semantic-interoperability.md).

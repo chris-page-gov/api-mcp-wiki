@@ -4,6 +4,7 @@
 *__PEER-REVIEW-tracked.docx
 
 _site/
+tmp/
 __pycache__/
 *.py[cod]
 .pytest_cache/

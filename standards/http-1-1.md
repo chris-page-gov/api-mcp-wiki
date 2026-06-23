@@ -11,6 +11,8 @@ verified: "yes"
 # What it is
 First standards-track HTTP/1.1 = **RFC 2068 (Jan 1997)**, revised as **RFC 2616 (June 1999)**, later restated as **RFC 9112 (2022)**. Described HTTP as a *generic, stateless, application-level* protocol for distributed systems.
 
+Published-paper references: <https://www.rfc-editor.org/info/rfc2068>, <https://www.rfc-editor.org/info/rfc2616>, and the 2014 refactor starting at <https://www.rfc-editor.org/info/rfc7230>.
+
 # In the document
 "Government relevance": shared architectural language — gateways, proxies, CDNs, audit, security controls — without every system sharing an implementation.
 

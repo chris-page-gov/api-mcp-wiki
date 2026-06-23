@@ -1,6 +1,6 @@
 # Publication Plan
 
-Status: initialized for local Git and GitHub Pages publication.
+Status: ready for GitHub remote, GitHub Pages, and first public release.
 
 ## Public Surfaces
 
@@ -8,19 +8,15 @@ Status: initialized for local Git and GitHub Pages publication.
   and review history.
 - GitHub Pages: public interactive viewer generated from `viewer.html` and the
   OKF Markdown corpus.
-- GitHub Releases: versioned snapshots once the paper review is complete.
+- GitHub Releases: versioned snapshots of the paper, OKF corpus, and viewer.
 - Optional DOI: connect the public repository to Zenodo after the first release
   if a persistent scholarly citation is required.
 
-## Current Release Gates
+## Remaining Release Steps
 
-- Resolve tracked changes and comments in
-  `From GET to Agentic Government__PEER-REVIEW-tracked.docx`.
-- Produce a clean public paper artifact if the paper itself should be released.
-- Choose an explicit license before inviting reuse.
-- Add final citation metadata, preferably `CITATION.cff`, before publicizing as
-  a citable research object.
-- Push to a GitHub remote and enable Pages with **GitHub Actions** as the source.
+- Push to a GitHub remote.
+- Enable Pages with **GitHub Actions** as the source.
+- Create a `v1.0.0` GitHub release after the first successful Pages deployment.
 
 ## Publication Checks
 
@@ -28,8 +24,10 @@ Run these before publishing or cutting a release:
 
 ```sh
 python3 scripts/check_okf.py
+python3 scripts/validate_published_document.py
 python3 scripts/build_site.py
 ```
 
-The Pages build deliberately excludes `.docx` files, Word lock files,
-`.DS_Store`, Git internals, and generated caches.
+The Pages build includes the public paper DOCX/PDF/Markdown and deliberately
+excludes Word lock files, `.DS_Store`, Git internals, temporary files, and
+generated caches.

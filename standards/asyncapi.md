@@ -11,6 +11,8 @@ verified: "yes"
 # What it is
 **AsyncAPI** (created 2017) describes event-driven APIs. **3.0** (Nov 2023) split operations out of channels; **3.1.0** shipped **31 January 2026**.
 
+Primary site: <https://www.asyncapi.com/>. Current cited release note: <https://www.asyncapi.com/blog/release-notes-3.1.0>.
+
 # In the document
 Anchors "synchronous requests → events and streams", alongside [CloudEvents](cloudevents.md).
 

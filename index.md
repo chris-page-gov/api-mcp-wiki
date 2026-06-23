@@ -1,17 +1,18 @@
 ---
 type: "Index"
 title: "api-mcp-wiki — From GET to agentic government (OKF bundle)"
-description: "An Open Knowledge Format bundle: the reviewed document, its evaluation, and every source as a cross-linked concept."
+description: "An Open Knowledge Format bundle: the published paper, its evaluation, and every source as a cross-linked concept."
 tags: [index, root, okf, agentic, uk-government]
 timestamp: 2026-06-20T00:00:00Z
 ---
 
 # api-mcp-wiki
 
-An **Open Knowledge Format (OKF v0.1)** bundle for *From GET to agentic government*. OKF represents knowledge as a directory of markdown files with YAML frontmatter (`type`, `title`, `description`, `resource`, `tags`, `timestamp`) and markdown cross-links that turn the directory into a graph. This bundle is **just files** — readable in any editor, on GitHub, or via the included offline viewer.
+An **Open Knowledge Format (OKF v0.1)** bundle for *From GET to Agentic Government*. OKF represents knowledge as a directory of markdown files with YAML frontmatter (`type`, `title`, `description`, `resource`, `tags`, `timestamp`) and markdown cross-links that turn the directory into a graph. This bundle is **just files** — readable in any editor, on GitHub, or via the included offline viewer.
 
 ## Contents
-- **[The reviewed document](document/index.md)** — overview, [timeline](document/timeline/index.md), [themes](document/themes/index.md), and the [peer review](document/peer-review.md).
+- **[The published paper](document/paper/from-get-to-agentic-government.md)** — Markdown, [PDF](document/paper/from-get-to-agentic-government.pdf), and [DOCX](document/paper/from-get-to-agentic-government.docx).
+- **[Document map](document/index.md)** — overview, [timeline](document/timeline/index.md), [themes](document/themes/index.md), and the [peer review](document/peer-review.md).
 - **[Sources index](sources-index.md)** — every source mentioned, with verified citations.
 - **[Standards & specifications](standards/index.md)** — 21 concepts.
 - **[UK government sources](uk-government/index.md)** — 11 concepts.
@@ -31,8 +32,8 @@ OKF v0.1 links are plain markdown — **unidirectional and untyped**. This bundl
 
 **Organisations** carry few glossary links by design — they are actors / standards bodies, not described by technical vocabulary; they connect to the vocabulary via the standards they steward. **UK-government** pages use policy/legal language, so they link to the governance terms (automated decision, meaningful human involvement, redress) and otherwise reach the vocabulary through the standards they adopt.
 
-## Verdict
-The document is **accept with minor revisions** — accurate and well-structured; revisions concern citation hygiene and one substantive gap (the legal/accountability layer). See the [peer review](document/peer-review.md).
+## Publication
+The paper is published in Markdown, PDF, and DOCX formats. The OKF corpus links the paper's references back to source concept pages and validates that alignment with `scripts/validate_published_document.py`.
 
 # Terms
 Glossary terms used here: [Provenance](glossary/provenance.md).
